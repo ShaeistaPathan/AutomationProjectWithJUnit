@@ -32,7 +32,7 @@ public class ToDoListTest {
 	@Test
 	public void validateSingleItemRemovalWithSingleCheckboxAndRemoveButton() {
 		toDoListPageObj = PageFactory.initElements(driver, ToDoListPage.class);
-		toDoListPageObj.addThreeListItems();;
+		toDoListPageObj.addThreeListItems();
 		toDoListPageObj.DeleteFirstItemWithSingleCheckboxAndRemoveButton();
 		toDoListPageObj.validateDeleteFirstItemWithSingleCheckboxAndRemoveButton();
 		toDoListPageObj.validateSecondAndThirdListItemIsPresent();
@@ -50,7 +50,7 @@ public class ToDoListTest {
 		
 	}
 	
-//	@After
+	@After
 	public void closeBrowser() {
 		BrowserFactory.tearDown();
 	}

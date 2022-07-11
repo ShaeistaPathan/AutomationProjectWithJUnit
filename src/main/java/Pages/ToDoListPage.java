@@ -48,14 +48,6 @@ public class ToDoListPage {
         public void validateToggleAllWithListCheckboxes() {
         	Assert.assertEquals(ToggleAllCheckboxElement.isSelected(),FirstListCheckboxElement.isSelected()&&SecondListCheckboxElement.isSelected()&&ThirdListCheckboxElement.isSelected());
         }
-
-//        public void validateToggleAllWithSecondListCheckbox() {
-//        	Assert.assertEquals(ToggleAllCheckboxElement.isSelected(),SecondListCheckboxElement.isSelected());
-//        }
-//        
-//        public void validateToggleAllWithThirdListCheckbox() {
-//        	Assert.assertEquals(ToggleAllCheckboxElement.isSelected(),ThirdListCheckboxElement.isSelected());
-//        }
         
         public void DeleteFirstItemWithSingleCheckboxAndRemoveButton() {
         	FirstListCheckboxElement.click();
@@ -63,13 +55,12 @@ public class ToDoListPage {
         }
         
         public void validateDeleteFirstItemWithSingleCheckboxAndRemoveButton() {
-       	   Assert.assertTrue("List item is present!", FirstListCheckboxElement!=null);
-//        	try {
-//        		FirstListCheckboxElement.isDisplayed();
-//        		System.out.println("First list item is present.");
-//        	}catch(NoSuchElementException e) {
-//        		System.out.println("First list item is deleted.");
-//        	}
+        	try {
+        		FirstListCheckboxElement.isDisplayed();
+        		System.out.println("First list item is present.");
+        	}catch(NoSuchElementException e) {
+        		System.out.println("First list item is deleted.");
+        	}
         }
         
         public void validateSecondAndThirdListItemIsPresent() {
