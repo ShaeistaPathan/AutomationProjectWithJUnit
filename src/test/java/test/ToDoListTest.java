@@ -19,7 +19,7 @@ public class ToDoListTest {
 		driver = BrowserFactory.inIt();
 	}
 	
-//	@Test
+	@Test
 	public void validateToggleAllCheckboxWithListItemsCheckbox() {
 	    toDoListPageObj = PageFactory.initElements(driver, ToDoListPage.class);
 	    toDoListPageObj.addThreeListItems();
@@ -38,7 +38,7 @@ public class ToDoListTest {
 		toDoListPageObj.validateSecondAndThirdListItemIsPresent();
 	}
 	
-//	@Test
+	@Test
 	public void ValidateDeleteAllListItemsWithRemoveButtonAndToggleAllOn() {
 		toDoListPageObj = PageFactory.initElements(driver, ToDoListPage.class);
 		toDoListPageObj.addThreeListItems();
