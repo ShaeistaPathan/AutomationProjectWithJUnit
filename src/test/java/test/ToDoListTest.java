@@ -22,6 +22,8 @@ public class ToDoListTest {
 	@Test
 	public void validateToggleAllCheckboxWithListItemsCheckbox() {
 	    toDoListPageObj = PageFactory.initElements(driver, ToDoListPage.class);
+	    toDoListPageObj.checkToggleAllCheckbox();
+	    toDoListPageObj.clickRemoveButton();
 	    toDoListPageObj.addThreeListItems();
 		toDoListPageObj.checkToggleAllCheckbox();
 		toDoListPageObj.validateToggleAllWithListCheckboxes();
@@ -32,15 +34,22 @@ public class ToDoListTest {
 	@Test
 	public void validateSingleItemRemovalWithSingleCheckboxAndRemoveButton() {
 		toDoListPageObj = PageFactory.initElements(driver, ToDoListPage.class);
+		toDoListPageObj.checkToggleAllCheckbox();
+	    toDoListPageObj.clickRemoveButton();
 		toDoListPageObj.addThreeListItems();
 		toDoListPageObj.DeleteFirstItemWithSingleCheckboxAndRemoveButton();
 		toDoListPageObj.validateDeleteFirstItemWithSingleCheckboxAndRemoveButton();
 		toDoListPageObj.validateSecondAndThirdListItemIsPresent();
+		
+		toDoListPageObj.checkToggleAllCheckbox();
+	    toDoListPageObj.clickRemoveButton();
 	}
 	
 	@Test
 	public void ValidateDeleteAllListItemsWithRemoveButtonAndToggleAllOn() {
 		toDoListPageObj = PageFactory.initElements(driver, ToDoListPage.class);
+		toDoListPageObj.checkToggleAllCheckbox();
+	    toDoListPageObj.clickRemoveButton();
 		toDoListPageObj.addThreeListItems();
 		toDoListPageObj.checkToggleAllCheckbox();
 		toDoListPageObj.clickRemoveButton();
